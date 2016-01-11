@@ -1,0 +1,114 @@
+package com.gojek.app.util;
+
+public abstract interface Config
+{
+  public static final String EST = "Est. ";
+  public static final int FLAG_CANCEL = 23;
+  public static final int FLAG_NEW = 25;
+  public static final int FLAG_UPDATE = 24;
+  public static final String FOOD_BEST_SELLER = "BEST_SELLER";
+  public static final String FOOD_CATEGORIES = "CATEGORIES";
+  public static final String FOOD_MY_RESTAURANT = "MY_RESTAURANT";
+  public static final String FOOD_RECOMMENDED_DISHES = "RECOMMENDED_DISHES";
+  public static final int GOBOX_SERVICE_TYPE = 7;
+  public static final int MART_PRODUCT_LIST_PAGE_SIZE = 21;
+  public static final String MENU_CATEGORY_OTHER_CODE = "Input_Order";
+  public static final String MENU_CATEGORY_OTHER_NAME = "Input Order";
+  public static final int MERCHANT_LIST_PAGE_SIZE = 32;
+  public static final int MERCHANT_SEARCH_PAGE_SIZE = 10;
+  public static final String PREFERENCE_NAME = "GojekPref";
+  public static final String PUSH_RECEIVER = "com.gojek.app.PUSH_RECEIVER";
+  public static final int SERVICE_TYPE_COURIER = 2;
+  public static final int SERVICE_TYPE_FOOD = 5;
+  public static final int SERVICE_TYPE_MART = 6;
+  public static final int SERVICE_TYPE_SHOPPING = 3;
+  public static final int SERVICE_TYPE_TRANSPORT = 1;
+  public static final int STATUS_BOOKING_BID = 1;
+  public static final int STATUS_BOOKING_CONFIRM_BID = 2;
+  public static final int STATUS_BOOKING_DONE = 4;
+  public static final int STATUS_BOOKING_NO_DRIVER = 5;
+  public static final int STATUS_BOOKING_PICKUP_DONE = 7;
+  public static final int STATUS_BOOKING_SEARCHING_DRIVER = 6;
+  public static final int STATUS_FORCE_UPDATE = 2;
+  public static final int STATUS_NO_UPDATE = 0;
+  public static final int STATUS_UPDATE_AVAILABLE = 1;
+  public static final String TIME_PATTERN = "yyyy-MM-dd'T'HH:mm:ssZ";
+  public static final String URI_OAUTH_TOKEN = "https://api.gojek.co.id/gojek/oauth/token?client_id=%s&grant_type=password&username=%s&password=%s";
+  public static final String URL_ADDRESS_HISTORY = "https://api.gojek.co.id/gojek/v2/customer/v2/history/%s";
+  public static final String URL_BASE = "https://api.gojek.co.id/gojek";
+  public static final String URL_BOOKING_HISTORY = "https://api.gojek.co.id/gojek/booking/history/%s";
+  public static final String URL_BOOKING_HISTORY_SERVICE_TYPE = "https://api.gojek.co.id/gojek/booking/history/%1s?serviceType=%2s&limit=10";
+  public static final String URL_BOOKING_HISTORY_V2 = "https://api.gojek.co.id/gojek/v2/booking/history/%s";
+  public static final String URL_BOOKING_RATE = "https://api.gojek.co.id/gojek/v2/booking/rate";
+  public static final String URL_CALCULATE = "https://api.gojek.co.id/gojek/v2/calculate/";
+  public static final String URL_CANCEL_BOOKING = "https://api.gojek.co.id/gojek/v2/booking/cancelBooking";
+  public static final String URL_CHANGE_PASSWORD = "https://api.gojek.co.id/gojek/v2/customer/changePassword";
+  public static final String URL_CHECK_UPDATE = "https://api.gojek.co.id/gojek/app-version";
+  public static final String URL_CUSTOMER_PROMO = "http://104.155.199.9/api/v1/gojek/featured.json";
+  public static final String URL_DRIVER_PHOTO = "https://api.gojek.co.id/gojek/file/img/%s";
+  public static final String URL_DRIVER_PHOTO_V2 = "https://api.gojek.co.id/gojek/v2/file/img/%s";
+  public static final String URL_DRIVER_PROFILE = "https://api.gojek.co.id/gojek/v2/drivers/%s";
+  public static final String URL_DRIVER_TIPS = "https://api.gojek.co.id/gojek/booking/driver-tip-option";
+  public static final String URL_FETCH_LATLNG = "https://api.gojek.co.id/gojek/poi/v2/findLatLng%s";
+  public static final String URL_FIND_BOOKING_ID = "https://api.gojek.co.id/gojek/v2/booking/%s";
+  public static final String URL_FIND_BOOKING_ORDERNO = "https://api.gojek.co.id/gojek/v2/booking/findByOrderNo/%s";
+  public static final String URL_FIND_MART_ITEM = "https://api.gojek.co.id/gojek/mart-item/find?martId=";
+  public static final String URL_FOOD_CATEGORY = "https://api.gojek.co.id/gojek/shopping-category/find?code=&serviceType=5";
+  public static final String URL_FOOD_MERCHANT_BY_CAT_PAGE_LIMIT = "https://api.gojek.co.id/gojek/merchant/find?location=%1s&category=%2s&page=%d&limit=%d";
+  public static final String URL_FOOD_MERCHANT_SEARCH_BY_NAME_PAGE_LIMIT = "https://api.gojek.co.id/gojek/merchant/v2/find?name=%s&page=%d&limit=%d";
+  public static final String URL_FORGET = "https://api.gojek.co.id/gojek/customer/forgetPassword";
+  public static final String URL_IS_HARAM = "https://dmkykyvzhmwd0.cloudfront.net/non_halal.png";
+  public static final String URL_ITEM_CATEGORY_BY_ID = "https://api.gojek.co.id/gojek/item-category/find?code=%1s&merchantId=%2s";
+  public static final String URL_LOGIN = "https://api.gojek.co.id/gojek/customer/login";
+  public static final String URL_LOGOUT = "https://api.gojek.co.id/gojek/customer/logout";
+  public static final String URL_MAKE_BOOKING = "https://api.gojek.co.id/gojek/booking/v3/makeBooking";
+  public static final String URL_MAKE_BOOKING_V3 = "https://api.gojek.co.id/gojek/v2/booking/v3/makeBooking";
+  public static final String URL_MART_BOOKING_HISTORY = "https://api.gojek.co.id/gojek/booking/history/%1s?limit=10&serviceType=6";
+  public static final String URL_MART_CATEGORIES_WITH_ITEMS = "https://api.gojek.co.id/gojek/mart-merchant-category/find-with-items?martId=%1s&code=%2s&limit=%d";
+  public static final String URL_MART_HISTORY = "https://api.gojek.co.id/gojek/mart-merchant/reorder/?customerId=%1s&limit=5";
+  public static final String URL_MART_ITEM_BY_CATEGORY_MART_ID = "https://api.gojek.co.id/gojek/mart-item/find?itemCategories=%1s&martId=%d&page=%d&limit=%d";
+  public static final String URL_MART_LIST = "https://api.gojek.co.id/gojek/mart-merchant/find?location=%s";
+  public static final String URL_MART_MERCHANT_FIND = "https://api.gojek.co.id/gojek/mart-merchant-category/find?martId=%1s&parentId=%d";
+  public static final String URL_MART_MERCHANT_FIND_BY_MERCHANT_NAME = "https://api.gojek.co.id/gojek/mart-merchant/find?location=%1s&filter=%d";
+  public static final String URL_MART_MERCHANT_SUB_CATEGORY = "https://api.gojek.co.id/gojek/mart-merchant-category/find-with-sub-category?martId=%1s";
+  public static final String URL_MART_ORIGIN_LOC = "https://api.gojek.co.id/gojek/mart-merchant/find?location=%1s&martId=%d";
+  public static final String URL_MART_RECENT_PURCHASE = "https://api.gojek.co.id/gojek/mart-merchant/recent/?customerId=%1s&martId=%d";
+  public static final String URL_MART_YOU_MAY_ALSO_LIKE = "https://api.gojek.co.id/gojek/mart-item/item?id=%d&martId=%1s&itemCategories=%s";
+  public static final String URL_MERCHANT_BY_ID = "https://api.gojek.co.id/gojek/merchant/%s";
+  public static final String URL_MERCHANT_ITEM_CATEGORY = "https://api.gojek.co.id/gojek/item-category/find?merchantId=%1s";
+  public static final String URL_MERCHANT_ITEM_WITH_CAT = "https://api.gojek.co.id/gojek/shopping-item/find?category=%1s&merchantId=%2s";
+  public static final String URL_MERCHANT_MENU = "https://api.gojek.co.id/gojek/item-category/find-with-menus?merchantId=%1s";
+  public static final String URL_MERCHANT_MYRESTAURANT_NEW = "https://api.gojek.co.id/gojek/merchant/history?location=%1s&merchantIds=%2s";
+  public static final String URL_MERCHANT_NEAR_PAGE_LIMIT = "https://api.gojek.co.id/gojek/merchant/find?location=%1s&page=%d&limit=%d";
+  public static final String URL_MERCHANT_NEAR_PAGE_LIMIT_WITH_NAME = "https://api.gojek.co.id/gojek/merchant/find?location=%1s&name=%2s";
+  public static final String URL_MERCHANT_SUGGESTION = "https://api.gojek.co.id/gojek/merchant-suggestion/";
+  public static final String URL_NEAR_DRIVER = "https://api.gojek.co.id/gojek/drivers/area?location=%s&timeout=false&limit=9999";
+  public static final String URL_NEAR_MART = "https://api.gojek.co.id/gojek/mart-merchant/findNearestMerchant?location=%s&martId=%d&limit=10";
+  public static final String URL_NEW_FOOD_CATEGORY = "https://api.gojek.co.id/gojek/shopping-category/find2";
+  public static final String URL_NEW_V3_FOOD_CATEGORY = "https://api.gojek.co.id/gojek/shopping-category/find3";
+  public static final String URL_POI_LIST_V2 = "https://api.gojek.co.id/gojek/poi/v2/findPoi?name=%s";
+  public static final String URL_PREBOOK_MSG = "https://api.gojek.co.id/gojek/booking/preorder/message";
+  public static final String URL_RECOMMENDED_DISHES = "https://api.gojek.co.id/gojek/recommended/dishes?location=%1s&page=%d&limit=%d";
+  public static final String URL_REDEEM_VOUCHER = "https://api.gojek.co.id/gojek/v2/voucher/redeem/";
+  public static final String URL_REFERRAL = "https://api.gojek.co.id/gojek/v2/customer/referral";
+  public static final String URL_REFERRAL_INFO = "https://api.gojek.co.id/gojek/v2/customer/referral-share-info/%s";
+  public static final String URL_REFERRAL_TEMPLATE = "https://api.gojek.co.id/gojek/v2/customer/first-ride-bonus-amount/%s";
+  public static final String URL_REVERSE_GEOCODE = "https://api.gojek.co.id/gojek/poi/reverse-geocode?latLong=%s";
+  public static final String URL_SERVICE_AREA_AVAIBILITY = "https://api.gojek.co.id/gojek/service-area-availability/check-cust-location/";
+  public static final String URL_SIGNUP = "https://api.gojek.co.id/gojek/customer/signup";
+  public static final String URL_SIGNUP_V2 = "https://api.gojek.co.id/gojek/customer/v2/signup";
+  public static final String URL_SMS_VERIFICATION_UPDATE_PROFILE = "https://api.gojek.co.id/gojek/v2/customer/verificationUpdateProfile";
+  public static final String URL_SOSMED_LOGIN = "https://api.gojek.co.id/gojek/customersocialmedia/login-social-media";
+  public static final String URL_TERM = "http://go-jek.com/terms-of-service";
+  public static final String URL_TOP_UP = "http://go-jek.com/credits/top-up/#/email/%s";
+  public static final String URL_UPDATE_PROFILE = "https://api.gojek.co.id/gojek/v2/customer/edit/v2";
+  public static final String URL_USER_PROFILE = "https://api.gojek.co.id/gojek/v2/customer/%s";
+  public static final String URL_USER_VERIFICATION = "https://api.gojek.co.id/gojek/customer/verification";
+  public static final String URL_VALIDATE_PIN = "https://api.gojek.co.id/gojek/v2/corporate/findByPin?pin=%s";
+}
+
+
+/* Location:              /Users/michael/Downloads/dex2jar-2.0/GO_JEK.jar!/com/gojek/app/util/Config.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       0.7.1
+ */
